@@ -1,0 +1,218 @@
+/* Base Styles */
+html {
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0A192F;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h1, h2 {
+    color: #64FFDA;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #64FFDA;
+    font-weight: bold;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: #112240;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Logo Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.site-title {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #64FFDA;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation Styles */
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #8892B0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: #64FFDA;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #64FFDA;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 4rem 2rem;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    color: #64FFDA;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.text-container {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.text-container h2 {
+    color: #64FFDA;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.text-container p {
+    color: #8892B0;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.text-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.text-container li {
+    color: #8892B0;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.about-image-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 1.5rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .text-container, .about-image-container {
+        width: 100%;
+    }
+    
+    .about-image-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+}
+
+
