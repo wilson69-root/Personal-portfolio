@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wilson Kevin - AI & Intelligent Agents Portfolio</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta name="description" content="Wilson Kevin's portfolio - AI engineer specializing in intelligent agents and automation">
     <meta name="author" content="Wilson Kevin">
 </head>
@@ -69,7 +70,7 @@
                                     <span>Code</span>
                                 </a>
                                 <a href="#" class="project-link">
-                                    <span>Live Demo</span>
+                                    <span>Coming Soon</span>
                                 </a>
                             </div>
                         </div>
@@ -89,7 +90,7 @@
                                     <span>Code</span>
                                 </a>
                                 <a href="#" class="project-link">
-                                    <span>Live Demo</span>
+                                    <span>Coming Soon</span>
                                 </a>
                             </div>
                         </div>
@@ -109,7 +110,7 @@
                                     <span>Code</span>
                                 </a>
                                 <a href="#" class="project-link">
-                                    <span>Live Demo</span>
+                                    <span>Coming Soon</span>
                                 </a>
                             </div>
                         </div>
@@ -127,22 +128,54 @@
                 </p>
                 <div class="contact-links">
                     <a href="mailto:wilson@agenix.tech" class="contact-link">
-                        <div class="contact-icon">✉️</div>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <span>Email</span>
                     </a>
                     <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <div class="contact-icon">🐙</div>
+                        <div class="contact-icon"><i class="fab fa-github"></i></div>
                         <span>GitHub</span>
                     </a>
                     <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <div class="contact-icon">💼</div>
+                        <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
                         <span>LinkedIn</span>
                     </a>
                     <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <div class="contact-icon">🐦</div>
-                        <span>Twitter</span>
+                        <div class="contact-icon"><i class="fab fa-x-twitter"></i></div>
+                        <span>X (Twitter)</span>
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <section id="hire" class="hire-section">
+            <div class="hire-container">
+                <h2 class="hire-heading">Ready to Collaborate?</h2>
+                <p class="hire-text">
+                    My skills in AI & Intelligent Agents, Full-Stack Development, and Automation are ready to contribute to your next project. 
+                    Take a look at my CV to learn more about my experience and let's discuss how I can help you achieve your goals.
+                </p>
+
+                <div class="buttons-container">
+                    <a href="path/to/your/cv.pdf" download class="button primary">
+                        <i class="fas fa-download"></i> Download My CV
+                    </a>
+                    <button class="button secondary" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </button>
+                </div>
+
+                <form id="contact-form" class="hire-form">
+                    <h3>Send me a message</h3>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <p class="contact-info">
+                    Or email me directly at <a href="mailto:wilson@agenix.tech">wilson@agenix.tech</a>
+                </p>
             </div>
         </section>
     </main>
