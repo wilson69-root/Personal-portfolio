@@ -201,10 +201,18 @@ p {
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    overflow: hidden;
 }
 
-.robot-emoji {
-    font-size: 8rem;
+.robot-image {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.robot-image:hover {
+    transform: scale(1.05);
 }
 
 /* Projects Section Styles */
