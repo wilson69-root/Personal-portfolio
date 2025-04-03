@@ -102,4 +102,54 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     observeElements();
+});
+
+// Initialize EmailJS
+(function() {
+    emailjs.init("6zVi_GCjvG6But-ay"); // Your EmailJS public key
+})();
+
+// Get the contact form
+const contactForm = document.getElementById('contact-form');
+
+// Add submit event listener
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Get form data
+    const name = contactForm.querySelector('input[type="text"]').value;
+    const email = contactForm.querySelector('input[type="email"]').value;
+    const subject = contactForm.querySelector('input[placeholder="Subject"]').value;
+    const message = contactForm.querySelector('textarea').value;
+
+    // Show loading state
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    submitButton.innerHTML = 'Sending...';
+    submitButton.disabled = true;
+
+    // Send email using EmailJS
+    emailjs.send("service_394i84i", "template_wal7wak", {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message,
+        to_name: "Wilson Kevin",
+        to_email: "wilsonkevinngatia@gmail.com"
+    })
+    .then(function() {
+        // Show success message
+        alert("Message sent successfully!");
+        contactForm.reset();
+    })
+    .catch(function(error) {
+        // Show error message
+        alert("Failed to send message. Please try again.");
+        console.error("Error:", error);
+    })
+    .finally(function() {
+        // Reset button state
+        submitButton.innerHTML = originalButtonText;
+        submitButton.disabled = false;
+    });
 }); 
